@@ -1,5 +1,6 @@
 import { useState } from 'react'
 import Button from '../components/button/Button'
+import './app.css'
 
 function App() {
 
@@ -16,10 +17,12 @@ function App() {
   }
 
   return (
-    <div>
-      <h2>Pass Generator</h2>
-      <Button event={randomPass} name='Password'/>
-      <Button event={handleCopyButton} name={copyButton}/>
+    <div className='container'>
+      <h2>Password Generator</h2>
+      <div className='container-main'>
+        <Button event={randomPass} name='Generate' />
+        <Button event={handleCopyButton} name={copyButton} />
+      </div>
       <span>{password}</span>
     </div>
   )
